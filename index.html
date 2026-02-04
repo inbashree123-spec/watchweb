@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WatchStore — Premium Watches</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts (Luxury feel) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+    .serif { font-family: "Playfair Display", serif; }
+
+    /* Smooth selection */
+    ::selection { background: #111827; color: #fff; }
+
+    /* Hide scrollbar (optional awwwards style) */
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-thumb { background: #e5e7eb; border-radius: 999px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+
+    /* Simple gradient grain feel */
+    .bg-noise {
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(0,0,0,0.06), transparent 40%),
+        radial-gradient(circle at 80% 10%, rgba(0,0,0,0.05), transparent 45%),
+        radial-gradient(circle at 50% 80%, rgba(0,0,0,0.05), transparent 45%);
+    }
+
+    /* Button glow */
+    .btn-glow {
+      box-shadow: 0 10px 30px rgba(17, 24, 39, 0.12);
+    }
+  </style>
+</head>
+
+<body class="bg-[#f7f6f3] text-gray-900 overflow-x-hidden">
+
+  <!-- Smooth Scroll wrapper (Lenis uses body, no wrapper needed, but we keep clean layout) -->
+
+  <!-- NAV -->
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-5">
+      <nav class="mt-5 bg-white/60 backdrop-blur-xl border border-black/5 rounded-3xl px-6 py-4 flex items-center justify-between">
+        
+        <a href="index.html" class="font-bold tracking-tight text-lg">
+          Watch<span class="text-gray-500">Store</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-7 text-sm font-medium">
+          <a class="hover:opacity-60 transition" href="index.html">Home</a>
+          <a class="hover:opacity-60 transition" href="products.html">Products</a>
+          <a class="hover:opacity-60 transition" href="about.html">About</a>
+          <a class="hover:opacity-60 transition" href="contact.html">Contact</a>
+        </div>
+
+        <a href="products.html"
+          class="text-sm font-semibold px-5 py-2 rounded-2xl bg-gray-900 text-white hover:bg-gray-800 transition btn-glow">
+          Explore
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="pt-28">
+    <section class="max-w-7xl mx-auto px-5">
+      <div class="grid lg:grid-cols-2 gap-10 items-end">
+
+        <!-- Left -->
+        <div class="pb-10">
+          <p class="hero-sub text-xs tracking-[0.25em] uppercase text-gray-500">
+            Premium watch boutique
+          </p>
+
+          <h1 class="hero-title serif mt-4 text-5xl md:text-6xl leading-[0.95] font-semibold">
+            Time, crafted<br />
+            like art.
+          </h1>
+
+          <p class="hero-desc mt-6 text-gray-600 text-lg max-w-xl leading-relaxed">
+            Discover luxury watches, smart watches, and signature daily wear.
+            Minimal design, maximum presence.
+          </p>
+
+          <div class="hero-cta mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="products.html"
+              class="px-7 py-4 rounded-2xl bg-gray-900 text-white font-semibold hover:bg-gray-800 transition btn-glow">
+              Shop Collection
+            </a>
+
+            <a href="contact.html"
+              class="px-7 py-4 rounded-2xl bg-white border border-black/10 font-semibold hover:border-black/20 hover:bg-black/5 transition">
+              Visit Store
+            </a>
+          </div>
+
+          <!-- Mini stats -->
+          <div class="hero-stats mt-10 grid grid-cols-3 gap-5 max-w-md">
+            <div class="bg-white/70 backdrop-blur border border-black/5 rounded-2xl p-4">
+              <p class="text-2xl font-bold">250+</p>
+              <p class="text-xs text-gray-500 mt-1">Watches</p>
+            </div>
+            <div class="bg-white/70 backdrop-blur border border-black/5 rounded-2xl p-4">
+              <p class="text-2xl font-bold">4.8★</p>
+              <p class="text-xs text-gray-500 mt-1">Rating</p>
+            </div>
+            <div class="bg-white/70 backdrop-blur border border-black/5 rounded-2xl p-4">
+              <p class="text-2xl font-bold">24h</p>
+              <p class="text-xs text-gray-500 mt-1">Support</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: hero visual -->
+        <div class="relative">
+          <div class="hero-card bg-white rounded-[2.5rem] border border-black/5 shadow-sm overflow-hidden bg-noise">
+            <div class="p-6 md:p-8">
+              <div class="flex items-center justify-between">
+                <p class="text-xs tracking-[0.25em] uppercase text-gray-500">New Drop</p>
+                <p class="text-xs text-gray-500">2026</p>
+              </div>
+
+              <div class="mt-6 overflow-hidden rounded-[2rem]">
+                <img
+                  class="hero-img w-full h-[420px] object-cover scale-[1.08]"
+                  src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1400&q=80"
+                  alt="Luxury Watch"
+                />
+              </div>
+
+              <div class="mt-6 flex items-end justify-between">
+                <div>
+                  <h3 class="text-xl font-bold">Titan — Obsidian</h3>
+                  <p class="text-sm text-gray-500 mt-1">Automatic • Steel • 42mm</p>
+                </div>
+                <p class="text-xl font-bold">₹4,999</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating tag -->
+          <div class="hero-tag absolute -top-5 right-6 bg-gray-900 text-white px-5 py-3 rounded-2xl text-sm font-semibold shadow-lg">
+            Limited Edition
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <section class="mt-16 overflow-hidden">
+      <div class="marquee flex gap-12 whitespace-nowrap py-5 text-gray-500 text-sm tracking-[0.2em] uppercase">
+        <span>Luxury</span>
+        <span>Smart</span>
+        <span>Classic</span>
+        <span>Premium</span>
+        <span>Limited</span>
+        <span>Signature</span>
+        <span>Luxury</span>
+        <span>Smart</span>
+        <span>Classic</span>
+        <span>Premium</span>
+      </div>
+    </section>
+
+    <!-- FEATURED -->
+    <section class="max-w-7xl mx-auto px-5 mt-16 pb-20">
+      <div class="flex items-end justify-between gap-6">
+        <div>
+          <p class="text-xs tracking-[0.25em] uppercase text-gray-500">Featured</p>
+          <h2 class="serif text-4xl font-semibold mt-3">The collection</h2>
+        </div>
+        <a href="products.html" class="text-sm font-semibold hover:opacity-60 transition">
+          View all →
+        </a>
+      </div>
+
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+
+        <!-- Card -->
+        <a href="product-details.html" class="prod-card group bg-white rounded-[2rem] border border-black/5 overflow-hidden shadow-sm">
+          <div class="overflow-hidden">
+            <img class="prod-img w-full h-72 object-cover group-hover:scale-105 transition duration-700"
+              src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1400&q=80"
+              alt="Watch" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-lg">Fossil Leather</h3>
+              <p class="font-bold">₹5,999</p>
+            </div>
+            <p class="text-sm text-gray-500 mt-2">Luxury strap • Minimal dial</p>
+            <p class="mt-5 text-sm font-semibold text-gray-900">
+              Explore →
+            </p>
+          </div>
+        </a>
+
+        <a href="product-details.html" class="prod-card group bg-white rounded-[2rem] border border-black/5 overflow-hidden shadow-sm">
+          <div class="overflow-hidden">
+            <img class="prod-img w-full h-72 object-cover group-hover:scale-105 transition duration-700"
+              src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1400&q=80"
+              alt="Watch" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-lg">Titan Classic</h3>
+              <p class="font-bold">₹3,499</p>
+            </div>
+            <p class="text-sm text-gray-500 mt-2">Everyday wear • Steel body</p>
+            <p class="mt-5 text-sm font-semibold text-gray-900">
+              Explore →
+            </p>
+          </div>
+        </a>
+
+        <a href="product-details.html" class="prod-card group bg-white rounded-[2rem] border border-black/5 overflow-hidden shadow-sm">
+          <div class="overflow-hidden">
+            <img class="prod-img w-full h-72 object-cover group-hover:scale-105 transition duration-700"
+              src="https://images.unsplash.com/photo-1526045431048-f857369baa09?auto=format&fit=crop&w=1400&q=80"
+              alt="Watch" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-lg">Smart Pro</h3>
+              <p class="font-bold">₹2,299</p>
+            </div>
+            <p class="text-sm text-gray-500 mt-2">Fitness • Calls • Tracking</p>
+            <p class="mt-5 text-sm font-semibold text-gray-900">
+              Explore →
+            </p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-black/5 bg-white/40">
+      <div class="max-w-7xl mx-auto px-5 py-10 flex flex-col md:flex-row gap-6 md:items-center md:justify-between">
+        <p class="font-bold text-lg">Watch<span class="text-gray-500">Store</span></p>
+        <p class="text-sm text-gray-500">© 2026 WatchStore • Premium watches</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+  <script>
+    // 1) Smooth scrolling (Lenis)
+    const lenis = new Lenis({
+      duration: 1.2,
+      smooth: true
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // 2) GSAP Setup
+    gsap.registerPlugin(ScrollTrigger);
+
+    // HERO entrance animation
+    gsap.from(".hero-sub", { opacity: 0, y: 20, duration: 0.8, ease: "power3.out" });
+    gsap.from(".hero-title", { opacity: 0, y: 30, duration: 1.0, delay: 0.1, ease: "power3.out" });
+    gsap.from(".hero-desc", { opacity: 0, y: 25, duration: 1.0, delay: 0.2, ease: "power3.out" });
+    gsap.from(".hero-cta", { opacity: 0, y: 25, duration: 1.0, delay: 0.3, ease: "power3.out" });
+    gsap.from(".hero-stats", { opacity: 0, y: 25, duration: 1.0, delay: 0.4, ease: "power3.out" });
+
+    gsap.from(".hero-card", { opacity: 0, y: 30, duration: 1.2, delay: 0.2, ease: "power3.out" });
+    gsap.from(".hero-tag", { opacity: 0, y: -10, duration: 1.0, delay: 0.8, ease: "power3.out" });
+
+    // Marquee infinite animation
+    gsap.to(".marquee", {
+      xPercent: -50,
+      repeat: -1,
+      duration: 12,
+      ease: "linear"
+    });
+
+    // Reveal product cards on scroll
+    gsap.utils.toArray(".prod-card").forEach((card, i) => {
+      gsap.from(card, {
+        opacity: 0,
+        y: 30,
+        duration: 0.9,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: card,
+          start: "top 85%"
+        },
+        delay: i * 0.08
+      });
+    });
+  </script>
+</body>
+</html>
